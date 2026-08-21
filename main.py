@@ -23,17 +23,19 @@ def display_results(score, matched, missing):
 
     print("\n---Matched skills---")
     for skill in matched:
-        print({skill})
+        print(skill)
 
     print("\n---Missing Skills---")
     for skill in missing:
-        print({skill})
+        print(skill)
 
 
 def main():
-    resume = extract_skills("Java, Spring Boot, SQL")
+    resume_input = input("Enter resume skills: ")
+    job_input = input("Enter job skills: ")
 
-    job = extract_skills("Java, AWS, SQL")
+    resume = extract_skills(resume_input)
+    job = extract_skills(job_input)
 
     matched, missing = compare_skills(resume, job)
 
