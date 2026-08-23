@@ -21,21 +21,24 @@ def calculate_score(matched, job_skills):
 def display_results(score, matched, missing):
     print(f"\nMatched Score: {score:.0f}%")
 
-    print("\n---Matched skills---")
+    print("\nMatched skills:")
     for skill in matched:
         print(skill)
 
-    print("\n---Missing Skills---")
+    print("\nMissing Skills:")
     for skill in missing:
         print(skill)
 
 
 def main():
-    resume_input = input("Enter resume skills: ")
-    job_input = input("Enter job skills: ")
+    with open("resume.txt", "r") as file:
+        resume_text = file.read()
 
-    resume = extract_skills(resume_input)
-    job = extract_skills(job_input)
+    with open("job.txt", "r") as file:
+        job_text = file.read()
+
+    resume = extract_skills(resume_text)
+    job = extract_skills(job_text)
 
     matched, missing = compare_skills(resume, job)
 
