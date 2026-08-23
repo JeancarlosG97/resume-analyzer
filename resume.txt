@@ -1,1 +1,9 @@
-Java, Spring Boot, SQL, React
+Jeancarlos Guerrero
+
+Software Engineer with experience developing web applications.
+
+Worked on backend systems using Java and Spring Boot.
+
+Created REST APIs and integrated SQL databases.
+
+Built frontend features using React.

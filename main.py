@@ -1,8 +1,20 @@
 def extract_skills(text):
+    known_skills = {
+        "java",
+        "spring boot",
+        "sql",
+        "react",
+        "aws",
+        "docker"
+    }
+
+    text = text.lower()
+
     skills = set()
 
-    for skill in text.split(","):
-        skills.add(skill.strip().lower())
+    for skill in known_skills:
+        if skill in text:
+            skills.add(skill)
 
     return skills
 
