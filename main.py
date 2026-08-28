@@ -1,10 +1,13 @@
 import json
 
+from pypdf import PdfReader
+
 
 def extract_skills(text):
     known_skills = load_skills()
 
     text = text.lower()
+    text = " ".join(text.split())
 
     skills = set()
 
@@ -13,6 +16,17 @@ def extract_skills(text):
             skills.add(skill)
 
     return skills
+
+
+def read_pdf(file_name):
+    reader = PdfReader(file_name)
+
+    text = ""
+
+    for page in reader.pages:
+        text += page.extract_text()
+
+    return text
 
 
 def load_skills():
@@ -46,11 +60,8 @@ def display_results(score, matched, missing):
 
 
 def main():
-    with open("resume.txt", "r") as file:
-        resume_text = file.read()
-
-    with open("job.txt", "r") as file:
-        job_text = file.read()
+    resume_text = read_pdf("resume.pdf")
+    job_text = read_pdf("job.pdf")
 
     resume = extract_skills(resume_text)
     job = extract_skills(job_text)
