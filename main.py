@@ -1,4 +1,5 @@
 import json
+import re
 
 from pypdf import PdfReader
 
@@ -11,9 +12,17 @@ def extract_skills(text):
 
     skills = set()
 
-    for skill in known_skills:
-        if skill in text:
-            skills.add(skill)
+    for skill, aliases in known_skills.items():
+
+        for alias in aliases:
+            if "+" in alias or "#" in alias or "." in alias:
+                pattern = re.escape(alias.lower())
+            else:
+                pattern = rf"\b{re.escape(alias.lower())}\b"
+
+            if re.search(pattern, text):
+                skills.add(skill)
+                break
 
     return skills
 
@@ -31,9 +40,7 @@ def read_pdf(file_name):
 
 def load_skills():
     with open("skills.json", "r") as file:
-        data = json.load(file)
-
-    return set(data["skills"])
+        return json.load(file)
 
 
 def compare_skills(resume_skills, job_skills):
