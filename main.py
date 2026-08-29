@@ -28,14 +28,24 @@ def extract_skills(text):
 
 
 def read_pdf(file_name):
-    reader = PdfReader(file_name)
+    try:
+        reader = PdfReader(file_name)
 
-    text = ""
+        text = ""
 
-    for page in reader.pages:
-        text += page.extract_text()
+        for page in reader.pages:
+            page_text = page.extract_text()
 
-    return text
+            if page_text:
+                text += page_text
+
+        return text
+
+    except FileNotFoundError:
+        print(f"Error: '{file_name}' was not found.")
+        return ""
+    except Exception as e:
+        print(f"Error reading PDF: {e}")
 
 
 def load_skills():
@@ -51,6 +61,9 @@ def compare_skills(resume_skills, job_skills):
 
 
 def calculate_score(matched, job_skills):
+    if not job_skills:
+        return 0
+
     return len(matched) / len(job_skills) * 100
 
 
@@ -69,6 +82,10 @@ def display_results(score, matched, missing):
 def main():
     resume_text = read_pdf("resume.pdf")
     job_text = read_pdf("job.pdf")
+
+    if not resume_text or not job_text:
+        print("Unable to analyze files.")
+        return
 
     resume = extract_skills(resume_text)
     job = extract_skills(job_text)
