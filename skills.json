@@ -1,10 +1,191 @@
 {
-  "skills": [
-    "java",
-    "spring boot",
-    "sql",
+  "java": [
+    "java"
+  ],
+  "python": [
+    "python"
+  ],
+  "c++": [
+    "c++"
+  ],
+  "c#": [
+    "c#"
+  ],
+  "javascript": [
+    "javascript"
+  ],
+  "typescript": [
+    "typescript"
+  ],
+  "sql": [
+    "sql"
+  ],
+  "mysql": [
+    "mysql"
+  ],
+  "postgresql": [
+    "postgresql",
+    "postgres"
+  ],
+  "mongodb": [
+    "mongodb"
+  ],
+  "oracle": [
+    "oracle"
+  ],
+  "spring": [
+    "spring"
+  ],
+  "spring boot": [
+    "spring boot"
+  ],
+  "spring security": [
+    "spring security"
+  ],
+  "hibernate": [
+    "hibernate"
+  ],
+  "jpa": [
+    "jpa",
+    "spring data jpa"
+  ],
+  ".net": [
+    ".net",
+    "dotnet"
+  ],
+  "asp.net": [
+    "asp.net",
+    "asp net"
+  ],
+  "react": [
     "react",
+    "reactjs"
+  ],
+  "angular": [
+    "angular"
+  ],
+  "node.js": [
+    "node.js",
+    "nodejs"
+  ],
+  "aws": [
     "aws",
+    "aws rds"
+  ],
+  "azure": [
+    "azure"
+  ],
+  "docker": [
     "docker"
+  ],
+  "kubernetes": [
+    "kubernetes"
+  ],
+  "git": [
+    "git",
+    "github",
+    "bitbucket"
+  ],
+  "jira": [
+    "jira"
+  ],
+  "postman": [
+    "postman"
+  ],
+  "swagger": [
+    "swagger",
+    "openapi"
+  ],
+  "linux": [
+    "linux",
+    "unix"
+  ],
+  "windows": [
+    "windows"
+  ],
+  "rest api": [
+    "rest api",
+    "rest apis",
+    "restful api",
+    "restful apis"
+  ],
+  "microservices": [
+    "microservice",
+    "microservices"
+  ],
+  "api design": [
+    "api design"
+  ],
+  "oop": [
+    "oop",
+    "object oriented programming",
+    "object-oriented programming"
+  ],
+  "ooad": [
+    "ooad",
+    "object oriented analysis and design",
+    "object-oriented analysis and design"
+  ],
+  "data structures": [
+    "data structure",
+    "data structures"
+  ],
+  "algorithms": [
+    "algorithm",
+    "algorithms"
+  ],
+  "mvc": [
+    "mvc",
+    "mvc architecture",
+    "model view controller"
+  ],
+  "testing": [
+    "testing",
+    "unit testing",
+    "integration testing"
+  ],
+  "debugging": [
+    "debugging",
+    "debug"
+  ],
+  "authentication": [
+    "authentication",
+    "authorization"
+  ],
+  "jwt": [
+    "jwt",
+    "jwt authentication"
+  ],
+  "security clearance": [
+    "security clearance"
+  ],
+  "agile": [
+    "agile",
+    "scrum"
+  ],
+  "ci/cd": [
+    "ci/cd",
+    "continuous integration",
+    "continuous delivery",
+    "continuous deployment"
+  ],
+  "orm": [
+    "orm",
+    "object relational mapping"
+  ],
+  "cloud": [
+    "cloud",
+    "cloud computing"
+  ],
+  "async processing": [
+    "asynchronous processing",
+    "asynchronous programming"
+  ],
+  "software design": [
+    "software design",
+    "software architecture",
+    "object oriented analysis",
+    "object oriented design",
+    "ooad"
   ]
 }
