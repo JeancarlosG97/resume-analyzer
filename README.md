@@ -8,21 +8,21 @@ The application extracts text from PDF documents, identifies technical skills fr
 
 ## Features
 
-Extract text from PDF resumes
+- Extract text from PDF resumes
+ 
+- Extract text from PDF job descriptions
 
-Extract text from PDF job descriptions
+- Load skills from a configurable JSON database
 
-Load skills from a configurable JSON database
+- Identify matching skills
 
-Identify matching skills
+- Calculate resume-to-job match percentage
 
-Calculate resume-to-job match percentage
+- Display matched skills
 
-Display matched skills
+- Display missing skills
 
-Display missing skills
-
-Easily expand supported skills through JSON
+- Easily expand supported skills through JSON
 
 ---
 
