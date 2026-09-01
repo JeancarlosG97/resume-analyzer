@@ -13,7 +13,6 @@ def extract_skills(text):
     skills = set()
 
     for skill, aliases in known_skills.items():
-
         for alias in aliases:
             if "+" in alias or "#" in alias or "." in alias:
                 pattern = re.escape(alias.lower())
@@ -46,6 +45,7 @@ def read_pdf(file_name):
         return ""
     except Exception as e:
         print(f"Error reading PDF: {e}")
+        return ""
 
 
 def load_skills():
