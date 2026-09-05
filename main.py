@@ -4,6 +4,8 @@ import re
 from pypdf import PdfReader
 
 
+## Uses regex and skill aliases to identify
+## canonical software engineering skills
 def extract_skills(text):
     known_skills = load_skills()
 
@@ -26,6 +28,7 @@ def extract_skills(text):
     return skills
 
 
+## Reads a PDF and converts it to text
 def read_pdf(file_name):
     try:
         reader = PdfReader(file_name)
@@ -48,11 +51,13 @@ def read_pdf(file_name):
         return ""
 
 
+## Loads skills from JSON
 def load_skills():
     with open("skills.json", "r") as file:
         return json.load(file)
 
 
+## Compares skills in resume to job posting
 def compare_skills(resume_skills, job_skills):
     matched = resume_skills.intersection(job_skills)
     missing = job_skills.difference(resume_skills)
@@ -60,6 +65,8 @@ def compare_skills(resume_skills, job_skills):
     return matched, missing
 
 
+## Score is calculated as:
+## matched skills / total job skills
 def calculate_score(matched, job_skills):
     if not job_skills:
         return 0
@@ -67,6 +74,7 @@ def calculate_score(matched, job_skills):
     return len(matched) / len(job_skills) * 100
 
 
+## Display all results
 def display_results(score, matched, missing):
     print(f"\nMatched Score: {score:.0f}%")
 

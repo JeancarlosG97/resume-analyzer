@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from pypdf import PdfReader
 from io import BytesIO
+from fastapi.middleware.cors import CORSMiddleware
 
 from main import (
     extract_skills,
@@ -8,6 +9,13 @@ from main import (
 )
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -18,7 +26,7 @@ def home():
 @app.post("/analyze")
 async def analyze(resume: UploadFile = File(...),
                   job_description: str = Form(...)
-            ):
+                  ):
     try:
         pdf_bytes = await resume.read()
 

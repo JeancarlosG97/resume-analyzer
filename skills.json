@@ -81,9 +81,13 @@
   "kubernetes": [
     "kubernetes"
   ],
+  "redis": [
+    "redis"
+  ],
   "git": [
     "git",
     "github",
+    "gitlab",
     "bitbucket"
   ],
   "jira": [
@@ -109,6 +113,9 @@
     "restful api",
     "restful apis"
   ],
+  "graphql": [
+    "graphql"
+  ],
   "microservices": [
     "microservice",
     "microservices"
@@ -125,6 +132,12 @@
     "ooad",
     "object oriented analysis and design",
     "object-oriented analysis and design"
+  ],
+  "software design": [
+    "software design",
+    "software architecture",
+    "object oriented analysis",
+    "object oriented design"
   ],
   "data structures": [
     "data structure",
@@ -181,11 +194,24 @@
     "asynchronous processing",
     "asynchronous programming"
   ],
-  "software design": [
-    "software design",
-    "software architecture",
-    "object oriented analysis",
-    "object oriented design",
-    "ooad"
+  "maven": [
+    "maven",
+    "apache maven"
+  ],
+  "gradle": [
+    "gradle"
+  ],
+  "junit": [
+    "junit"
+  ],
+  "mockito": [
+    "mockito"
+  ],
+  "jenkins": [
+    "jenkins"
+  ],
+  "kafka": [
+    "kafka",
+    "apache kafka"
   ]
 }
