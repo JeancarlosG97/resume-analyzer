@@ -186,10 +186,6 @@
     "orm",
     "object relational mapping"
   ],
-  "cloud": [
-    "cloud",
-    "cloud computing"
-  ],
   "async processing": [
     "asynchronous processing",
     "asynchronous programming"
@@ -213,5 +209,15 @@
   "kafka": [
     "kafka",
     "apache kafka"
+  ],
+  "cloud": [
+    "aws",
+    "aws rds",
+    "amazon web services",
+    "azure",
+    "gcp",
+    "google cloud",
+    "render",
+    "cloud"
   ]
 }
