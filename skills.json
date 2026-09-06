@@ -157,10 +157,6 @@
     "unit testing",
     "integration testing"
   ],
-  "debugging": [
-    "debugging",
-    "debug"
-  ],
   "authentication": [
     "authentication",
     "authorization"
