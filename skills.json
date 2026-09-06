@@ -104,9 +104,6 @@
     "linux",
     "unix"
   ],
-  "windows": [
-    "windows"
-  ],
   "rest api": [
     "rest api",
     "rest apis",
@@ -215,5 +212,21 @@
     "google cloud",
     "render",
     "cloud"
+  ],
+  "fastapi": [
+    "fastapi",
+    "fast api"
+  ],
+  "axios": [
+    "axios"
+  ],
+  "render": [
+    "render"
+  ],
+  "pytest": [
+    "pytest"
+  ],
+  "github actions": [
+    "github actions"
   ]
 }
