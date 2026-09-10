@@ -26,6 +26,54 @@ def home():
     return {"message": "Resume Analyzer API"}
 
 
+@app.post("/analyze-demo")
+def analyze_demo():
+
+    demo_resume = """
+    Java
+    Spring Boot
+    Spring Security
+    React
+    REST APIs
+    MySQL
+    Docker
+    Git
+    AWS RDS
+    JWT Authentication
+    Data Structures
+    Algorithms
+    """
+
+    demo_job_description = """
+    Software Engineer I
+
+    Requirements:
+    Java
+    Spring Boot
+    REST APIs
+    PostgreSQL
+    AWS
+    Git
+    Object-Oriented Programming
+    Data Structures
+    Algorithms
+    Docker
+    Kafka
+    """
+
+    resume_skills = extract_skills(demo_resume)
+    job_skills = extract_skills(demo_job_description)
+
+    matched = resume_skills.intersection(job_skills)
+    score = calculate_score(matched, job_skills)
+
+    return {
+        "score": round(score, 2),
+        "matched_skills": sorted(matched),
+        "missing_skills": sorted(job_skills - matched)
+    }
+
+
 @app.post("/analyze")
 async def analyze(resume: UploadFile = File(...),
                   job_description: str = Form(...)
